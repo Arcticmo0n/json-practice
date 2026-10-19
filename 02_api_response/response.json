@@ -1,0 +1,24 @@
+{
+  "status": "ok",
+  "pagination": {
+    "page": 1,
+    "per_page": 2,
+    "total": 3
+  },
+  "users": [
+    {
+      "id": 1,
+      "name": "Alice",
+      "email": "alice@example.com",
+      "roles": ["admin", "user"],
+      "active": true
+    },
+    {
+      "id": 2,
+      "name": "Bob",
+      "email": "bob@example.com",
+      "roles": ["user"],
+      "active": false
+    }
+  ]
+}
