@@ -1,0 +1,28 @@
+[project]
+name = "json-practice"
+version = "0.1.0"
+description = "Тренировка JSON: валидация, схемы, JSONL, трансформации"
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.6",
+    "mypy>=1.10",
+    "jsonschema>=4.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["01_basics", "02_api_response", "03_config", "04_jsonl", "05_transform"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true

@@ -1,0 +1,11 @@
+{
+  "name": "Arcticmo0n",
+  "age": 30,
+  "is_active": true,
+  "score": 99.5,
+  "tags": ["dev", "python"],
+  "address": {
+    "city": "Moscow",
+    "zip": null
+  }
+}
