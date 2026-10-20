@@ -30,11 +30,11 @@ def test_invalid_user_raises() -> None:
         "pagination": {"page": 1, "per_page": 2, "total": 3},
         "users": [
             {
-                "id": 0, # minimum: 1
-                "name": "", # minLength: 1
-                "email": "not-an-email", # format: email
-                "roles": [], # ok (enum не нарушен)
-                "active": "yes", # ожидается type boolean (true/false)
+                "id": 0,  # minimum: 1
+                "name": "",  # minLength: 1
+                "email": "not-an-email",  # format: email
+                "roles": [],  # ok (enum не нарушен)
+                "active": "yes",  # ожидается type boolean (true/false)
             }
         ],
     }
@@ -46,7 +46,7 @@ def test_missing_required_field_raises() -> None:
     schema = _load("schema.json")
     bad = {
         "status": "ok",
-        "pagination": {"page": 1, "per_page": 2}, # нет total
+        "pagination": {"page": 1, "per_page": 2},  # нет total
         "users": [],
     }
     with pytest.raises(jsonschema.ValidationError):

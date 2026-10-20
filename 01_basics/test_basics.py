@@ -24,15 +24,11 @@ def _reject_constant(value: str) -> None:
 
 @pytest.mark.parametrize(
     "filename",
-    [
-        "invalid_trailing_comma.json",
-        "invalid_single_quotes.json",
-        "invalid_nan.json"
-    ],
+    ["invalid_trailing_comma.json", "invalid_single_quotes.json", "invalid_nan.json"],
 )
 def test_invalid_json_raises(filename: str) -> None:
     with pytest.raises((json.JSONDecodeError, ValueError)):
         json.loads(
             (BASE / filename).read_text(encoding="utf-8"),
-            parse_constant=_reject_constant
+            parse_constant=_reject_constant,
         )
