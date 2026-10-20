@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "app": {
+      "type": "object",
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "version": {"type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$"},
+        "debug": {"type": "boolean"}
+      },
+      "required": ["name", "version", "debug"],
+      "additionalProperties": false
+    },
+    "database": {
+      "type": "object",
+      "properties": {
+        "host": {"type": "string", "minLength": 1},
+        "port": {"type": "integer", "minimum": 1, "maximum": 65535},
+        "name": {"type": "string", "minLength": 1},
+        "pool_size": {"type": "integer", "minimum": 1}
+      },
+      "required": ["host", "port", "name", "pool_size"],
+      "additionalProperties": false
+    },
+    "logging": {
+      "type": "object",
+      "properties": {
+        "level": {"type": "string",
+          "enum": ["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"]},
+        "format": {"type": "string"},
+        "file": {"type": ["string", "null"]}
+      },
+      "required": ["level", "format"],
+      "additionalProperties": false
+    },
+    "features": {
+      "type": "object",
+      "properties": {
+        "enable_cache": {"type": "boolean"},
+        "enable_metrics": {"type": "boolean"}
+      },
+      "required": ["enable_cache", "enable_metrics"],
+      "additionalProperties": false
+    }
+  },
+  "required": ["app", "database", "logging", "features"],
+  "additionalProperties": false
+}

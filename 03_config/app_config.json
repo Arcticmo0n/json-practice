@@ -1,0 +1,22 @@
+{
+  "app": {
+    "name": "json-practice",
+    "version": "0.1.0",
+    "debug": false
+  },
+  "database": {
+    "host": "localhost",
+    "port": 5432,
+    "name": "json_practice",
+    "pool_size": 5
+  },
+  "logging": {
+    "level": "INFO",
+    "format": "%(asctime)s %(levelname)s %(message)s",
+    "file": null
+  },
+  "features": {
+    "enable_cache": true,
+    "enable_metrics": false
+  }
+}
