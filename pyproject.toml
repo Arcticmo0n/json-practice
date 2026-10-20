@@ -11,6 +11,7 @@ dev = [
     "mypy>=1.10",
     "jsonschema>=4.0",
     "types-jsonschema",
+    "pre-commit",
 ]
 
 [tool.pytest.ini_options]
