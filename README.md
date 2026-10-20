@@ -25,6 +25,7 @@ python -m pytest
 - `ruff` - линтер
 - `mypy` - проверка типов
 - `jsonschema` - валидация по схеме
+- `pre-commit` - хуки перед коммитом (ruff, mypy)
 
 Конфиг - в [`pyproject.toml`](pyproject.toml).
 
