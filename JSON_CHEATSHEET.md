@@ -158,6 +158,7 @@ with open("events.jsonl", encoding="utf-8") as f:
 в Python библиотек - jsonschema:
 ```python
 import jsonschema
+
 jsonschema.validate(instance=data, schema=schema)
 ```
 Применение: валидация API-запросов, конфигов, OpenAPI, CI.
