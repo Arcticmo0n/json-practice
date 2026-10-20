@@ -1,4 +1,6 @@
 # JSON Practice
+![CI](https://github.com/Arcticmo0n/json-practice/actions/workflows/ci.yml/badge.svg)
+
 Тренировка JSON: синтаксис, схемы, JSONL, трансформации.
 
 ## Структура
